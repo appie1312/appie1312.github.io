@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/', // user site (appie1312.github.io) moet base op '/' hebben
+  base: '/', // user site (appie1312.github.io) moet base op '/'
   plugins: [react()],
 })

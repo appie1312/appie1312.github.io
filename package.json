@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node -e \"require('fs').writeFileSync('dist/.nojekyll','')\"",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b main"
+    "deploy": "gh-pages -d dist",
+    "deploy:main": "npm run build && gh-pages -d dist -b main"
   },
   "dependencies": {
     "react": "^19.1.1",
